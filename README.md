@@ -1,0 +1,2 @@
+# bones
+static site configuration
