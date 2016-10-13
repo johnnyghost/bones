@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Abel';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Abel-Regular.ttf) format('truetype');
+}
+
+h1 {
+  font-size: 2em;
+}
