@@ -2,7 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV || 'dev';
-const PATHS = { SOURCE: path.join(__dirname, '/src/'), DIST: path.join(__dirname, '/dist') };
+const PATHS = {
+  SOURCE: path.join(__dirname, '/src/'),
+  DIST: path.join(__dirname, '/dist')
+};
 const env = {
   production: NODE_ENV === 'prod',
   staging: NODE_ENV === 'staging',
@@ -18,7 +21,6 @@ module.exports = {
 
   output: {
     path: PATHS.DIST,
-    publicPath: '/dist/',
     filename: 'bundle.js'
   },
 

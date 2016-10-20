@@ -14,20 +14,15 @@ config.devServer = {
   contentBase: 'dist',
   inline: true,
   port: 3000,
-  colors: true,
-  historyApiFallback: {
-    index: '/dist/'
-  }
+  colors: true
 };
 
-config.plugins = config.plugins.concat(templates(), [
+config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin(),
-  new HtmlWebpackPlugin({
-    template: './src/pages/index.html'
-  })
-]);
-console.log(config.plugins);
+  new HtmlWebpackPlugin({ template: './src/pages/index.html' })
+], templates());
+
 config.module = Object.assign({}, config.module, {
   preLoaders: [
     {
